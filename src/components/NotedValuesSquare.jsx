@@ -1,4 +1,4 @@
-import { notedValuesStyles } from "../myStyles";
+import { notedValuesStyles } from "../constants/myStyles";
 import { useSelector } from "react-redux";
 
 export default function NotedValuesSquare({ squareId, cellId }) {

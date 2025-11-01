@@ -1,6 +1,7 @@
 import generateSolution from "./randomSolution.js";
+import { difficulties } from "../constants/difficulties.js";
 
-export default function initializeBoard() {
+export default function initializeBoard(difficulty) {
   const solution = generateSolution();
   const initial = [];
 
@@ -11,7 +12,7 @@ export default function initializeBoard() {
     }
   }
 
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < difficulties[difficulty]; i++) {
     let hasBeenChanged = false;
     while (!hasBeenChanged) {
       const randomY = Math.round(Math.random() * (solution.length - 1));

@@ -1,7 +1,7 @@
 import { memo } from "react";
 import NotedValuesSquare from "./NotedValuesSquare.jsx";
 import EnteredValueSquare from "./EnteredValueSquare.jsx";
-import { myStyles } from "../myStyles.js";
+import { myStyles } from "../constants/myStyles.js";
 import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { boardActions } from "../store/board/boardSlice.js";
 
@@ -84,7 +84,6 @@ const Cell = memo(function Cell({ squareId, cellId }) {
   }
 
   if (styles.isColiding) {
-    console.log("colfsffsdifsufsdfb " + squareId + " " + cellId);
     styleBg = myStyles["ColidingBg"];
   }
 
@@ -98,7 +97,7 @@ const Cell = memo(function Cell({ squareId, cellId }) {
   }
 
   return (
-    <div className={`relative h-21 w-21 ${styleText} ${styleBg}`}>
+    <div className={`relative h-18 w-18 ${styleText} ${styleBg}`}>
       <input
         className={`absolute inset-0 z-10 h-full w-full cursor-pointer caret-transparent outline-none ${borders} border-black`}
         onChange={handleValueEntered}
