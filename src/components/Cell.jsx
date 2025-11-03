@@ -99,6 +99,8 @@ const Cell = memo(function Cell({ squareId, cellId }) {
   return (
     <div className={`relative h-18 w-18 ${styleText} ${styleBg}`}>
       <input
+        data-squareid={squareId}
+        data-cellid={cellId}
         className={`absolute inset-0 z-10 h-full w-full cursor-pointer caret-transparent outline-none ${borders} border-black`}
         onChange={handleValueEntered}
         value=""

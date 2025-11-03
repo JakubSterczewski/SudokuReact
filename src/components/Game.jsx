@@ -7,18 +7,17 @@ import { useEffect } from "react";
 import Controls from "./Controls";
 import NumbersPanel from "./NumbersPanel";
 
+import NewGameButton from "./NewGameButton";
+
 export default function Game() {
   const [difficulty, setDifficulty] = useState("Medium");
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     console.log("Dispatching newGame " + difficulty);
     dispatch(boardActions.newGame({ difficulty }));
   }, [dispatch, difficulty]);
-
-  function handleNewGame() {
-    dispatch(boardActions.newGame({ difficulty }));
-  }
 
   function handleChangeDifficulty(difficulty) {
     setDifficulty(difficulty);
@@ -33,9 +32,7 @@ export default function Game() {
       <div className="flex flex-col">
         <Controls />
         <NumbersPanel />
-        <button className="bg-blue-500" onClick={handleNewGame}>
-          handleNewGame
-        </button>
+        <NewGameButton handleChangeDifficulty={handleChangeDifficulty} />
       </div>
     </main>
   );
