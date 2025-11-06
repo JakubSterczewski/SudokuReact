@@ -6,13 +6,17 @@ export default function FocusManager() {
 
   useEffect(() => {
     function handleClick() {
-      console.log("clickeddada");
       setTimeout(() => {
         const active = document.activeElement;
         const selector = `[data-squareid="${selectedCell.squareId}"][data-cellid="${selectedCell.cellId}"]`;
         const selectedInput = document.querySelector(selector);
-
-        if (selectedInput && active !== selectedInput) {
+        if (
+          (!(active instanceof HTMLInputElement) ||
+            !active.hasAttribute("data-squareid") ||
+            !active.hasAttribute("data-cellid")) &&
+          selectedInput &&
+          active !== selectedInput
+        ) {
           selectedInput.focus();
         }
       }, 50);
