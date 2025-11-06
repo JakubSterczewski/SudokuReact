@@ -1,15 +1,15 @@
 export const myStyles = {
-  SelectedBg: "bg-purple-500",
+  SelectedBg: "bg-violet-400",
   ColidingBg: "bg-red-300",
   WrongText: "text-red-500",
   WrongBg: "bg-red-300",
-  AroundBg: "bg-gray-300",
-  InitialValueText: "text-black",
-  EnteredValueText: "text-black",
-  SimilarBg: "bg-green-500",
+  AroundBg: "bg-violet-200",
+  InitialValueText: "text-gray-900",
+  EnteredValueText: "text-violet-600",
+  SimilarBg: "bg-fuchsia-300",
 };
 
 export const notedValuesStyles = {
-  notedValueSelectedBg: "bg-stone-600",
-  notedValueTextColor: "text-stone-300",
+  notedValueSelectedBg: "bg-fuchsia-300",
+  notedValueTextColor: "text-gray-700",
 };

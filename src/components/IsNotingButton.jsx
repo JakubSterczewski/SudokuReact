@@ -14,7 +14,7 @@ export default function IsNotingButton() {
     <ControlsButton
       text={"Noting"}
       onClickHandler={handleChange}
-      bgClassName={`${isNoting ? "bg-green-500 hover:bg-green-600" : "bg-gray-400 hover:bg-gray-500"}`}
+      bgClassName={`${isNoting ? "bg-green-500 hover:bg-green-600" : ""}`}
     />
   );
 }

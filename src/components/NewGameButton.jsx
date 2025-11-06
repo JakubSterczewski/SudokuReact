@@ -33,8 +33,11 @@ export default function NewGameButton({ handleChangeDifficulty }) {
         <button onClick={handleCloseModal}>Close</button>
       </DifficultiesModal>
 
-      <button className="bg-blue-500" onClick={handleNewGame}>
-        handleNewGame
+      <button
+        className="mt-2 h-16 rounded-xl bg-fuchsia-300 text-2xl font-bold text-white hover:bg-violet-600"
+        onClick={handleNewGame}
+      >
+        New Game
       </button>
     </>
   );

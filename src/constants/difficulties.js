@@ -1,5 +1,5 @@
 export const difficulties = {
-  Hard: 20,
-  Medium: 50,
   Easy: 70,
+  Medium: 50,
+  Hard: 20,
 };

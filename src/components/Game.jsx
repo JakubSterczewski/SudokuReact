@@ -24,12 +24,15 @@ export default function Game() {
   }
 
   return (
-    <main className="mt-10 flex justify-center">
+    <main className="mt-10 flex justify-center gap-3">
       <div className="flex flex-col items-start">
-        <Difficulties handleChangeDifficulty={handleChangeDifficulty} />
+        <Difficulties
+          handleChangeDifficulty={handleChangeDifficulty}
+          difficulty={difficulty}
+        />
         <Board />
       </div>
-      <div className="flex flex-col">
+      <div className="flex w-1/4 flex-col">
         <Controls />
         <NumbersPanel />
         <NewGameButton handleChangeDifficulty={handleChangeDifficulty} />
